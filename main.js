@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////
 //Switch Nav/Hamburger --- 
 ///////////////////////////////////////////////////
-const nav = document.getElementById('nav');
+const nav = document.getElementById('navbar');
 const mainnav = document.getElementById('mainnav');
 const hamburger = document.getElementById('hamburger');
 
@@ -33,11 +33,11 @@ function resizeWindow(event){
     console.log(width);
 
     if(width <= minWidth){
-        nav.style.display = "none";
+        navbar.style.display = "none";
         hamburger.style.display = "block";
 
     }else{
-        nav.style.display = "flex";
+        navbar.style.display = "flex";
         hamburger.style.display = "none";
 
     }
@@ -52,7 +52,7 @@ hamburger.addEventListener('click',showMobileNav);
 
 function showMobileNav(event){
     //nav.style.display = "block";
-    nav.classList.toggle('.navClicked');
+    navbar.classList.toggle('.navClicked');
     //hamburger.style.display = "none";
     mainnav.classList.toggle('.mainnavClicked');
     line1.classList.toggle('rotateA');
