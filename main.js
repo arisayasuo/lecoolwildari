@@ -26,24 +26,23 @@ console.log(line3);
 console.log(mainnav);
 
 
-const minWidth = 480
+// const minWidth = 480
 
-function resizeWindow(event){
-    const width = window.innerWidth;
-    console.log(width);
+// function resizeWindow(event){
+//     const width = window.innerWidth;
 
-    if(width <= minWidth){
-        navbar.style.display = "none";
-        hamburger.style.display = "block";
+//     if(width <= minWidth){
+//         navbar.style.display = "none";
+//         hamburger.style.display = "block";
+//         console.log('if')
+//     }else{
+//         navbar.style.display = "flex";
+//         hamburger.style.display = "none";
+//         console.log('else')
+//     }
+// }
 
-    }else{
-        navbar.style.display = "flex";
-        hamburger.style.display = "none";
-
-    }
-}
-
-window.addEventListener('resize', resizeWindow);
+// // window.addEventListener('resize', resizeWindow);
 
 ///////////////////////////////////////////////////
 //Control hamburger --- HW: show mobile ver. of nav

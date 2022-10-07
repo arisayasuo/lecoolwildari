@@ -367,14 +367,15 @@ body{
 
 
 /*  */
-@media screen and (min-width:480px) {
+@media screen and (max-width:480px) {
     .main-nav {
-        display: flex;
+        /* display: flex;
         font-size: 1rem;
         text-transform: uppercase;
         margin-top: 34px;
         list-style: none;
-        padding-right: 40px;
+        padding-right: 40px; */
+        display: none;
     }
 
     #hamburger{
