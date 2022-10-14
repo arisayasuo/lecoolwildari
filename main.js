@@ -55,10 +55,9 @@ hamburger.addEventListener('click',showMobileNav);
 
 function showMobileNav(event){
     //nav.style.display = "block";
-    navbar.classList.toggle('.navClicked');
     //hamburger.style.display = "none";
-    mainnav.classList.toggle('.mainnavClicked');
-    mobilemainnav.classList.toggle('.mobilemainnavshow')
+    mainnav.classList.toggle('mainnavClicked');
+    mobilemainnav.classList.toggle('mobilemainnavshow')
     // mobilemainnav.after(clone_mainnav);
     line1.classList.toggle('rotateA');
     line2.classList.toggle('rotateB');

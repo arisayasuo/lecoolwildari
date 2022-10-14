@@ -115,13 +115,8 @@ body{
     text-decoration: none;
 }
 
-.navClicked {
-    margin-left: 150px;
-    margin-top: -30px;
-    
-}
-
 .mainnavClicked {
+    display: flex !important;
     flex-direction: column;
 }
 
@@ -401,14 +396,15 @@ body{
 
 /*  */
 @media screen and (max-width:480px) {
-    .main-nav {
+    #mainnav ul li {
         /* display: flex;
-        font-size: 1rem;
+        font-size: 1rem;    
         text-transform: uppercase;
         margin-top: 34px;
         list-style: none;
         padding-right: 40px; */
-        display: none;
+        /* display: none; */
+        text-align: center;
     }
 
     #hamburger{
@@ -426,20 +422,18 @@ body{
     }
 }
 @media screen and (min-width:1024px) {
-#main-contact,#main-hero2-text,#main-hero3,#main-hero4{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    #main-contact,#main-hero2-text,#main-hero3,#main-hero4{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.main-nav {
-    display: flex;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin-top: 34px;
-    list-style: none;
-    padding-right: 40px;
-}
-
-
+    .main-nav {
+        display: flex;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-top: 34px;
+        list-style: none;
+        padding-right: 40px;
+    }
 }
