@@ -6,6 +6,10 @@ const nav = document.getElementById('navbar');
 const mainnav = document.getElementById('mainnav');
 const hamburger = document.getElementById('hamburger');
 
+// GET MENU element and clone it//
+const mobilemainnav = document.getElementById('mobilemainnav');
+const clone_mainnav = mainnav.cloneNode(true);
+
 // //Make Hamburger with 3 elements no pseudo element
 // //
 // const hamburgerBefore = window.getComputedStyle(
@@ -54,6 +58,8 @@ function showMobileNav(event){
     navbar.classList.toggle('.navClicked');
     //hamburger.style.display = "none";
     mainnav.classList.toggle('.mainnavClicked');
+    mobilemainnav.classList.toggle('.mobilemainnavshow')
+    // mobilemainnav.after(clone_mainnav);
     line1.classList.toggle('rotateA');
     line2.classList.toggle('rotateB');
     line3.classList.toggle('rotateC');
@@ -77,4 +83,11 @@ function showMobileNav(event){
 // hide hamburger menu in the beginning (display none is not working)
 // hamburger menu's line2 doesn't rotate
 // have to make main-nav to stack vertical when it's clicked
+
+
+
+console.log(mobilemainnav);
+console.log(clone_mainnav);
+
+
         
