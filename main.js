@@ -1,33 +1,41 @@
 
-///////////////////////////////////////////////////
-//Switch Nav/Hamburger --- 
-///////////////////////////////////////////////////
-const nav = document.getElementById('navbar');
-const mainnav = document.getElementById('mainnav');
-const hamburger = document.getElementById('hamburger');
-
-// GET MENU element and clone it//
-const mobilemainnav = document.getElementById('mobilemainnav');
-const clone_mainnav = mainnav.cloneNode(true);
-
-// //Make Hamburger with 3 elements no pseudo element
-// //
-// const hamburgerBefore = window.getComputedStyle(
-// 	document.querySelector('#hamburger'), ':before'
-// )
-// const hamburgerAfter = window.getComputedStyle(
-// 	document.querySelector('#hamburger'), ':after'
-// )
-
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-const line3 = document.getElementById('line3');
+const burgerMenu = document.querySelector('.burger-menu');
+const menuBar = document.querySelector('.menu-bar')
+burgerMenu.addEventListener('click', () => {
+	menuBar.classList.toggle('toggleMenu');
+})
 
 
-console.log(line1);
-console.log(line2);
-console.log(line3);
-console.log(mainnav);
+
+// ///////////////////////////////////////////////////
+// //Switch Nav/Hamburger --- 
+// ///////////////////////////////////////////////////
+// const nav = document.getElementById('navbar');
+// const mainnav = document.getElementById('mainnav');
+// const hamburger = document.getElementById('hamburger');
+
+// // GET MENU element and clone it//
+// const mobilemainnav = document.getElementById('mobilemainnav');
+// const clone_mainnav = mainnav.cloneNode(true);
+
+// // //Make Hamburger with 3 elements no pseudo element
+// // //
+// // const hamburgerBefore = window.getComputedStyle(
+// // 	document.querySelector('#hamburger'), ':before'
+// // )
+// // const hamburgerAfter = window.getComputedStyle(
+// // 	document.querySelector('#hamburger'), ':after'
+// // )
+
+// const line1 = document.getElementById('line1');
+// const line2 = document.getElementById('line2');
+// const line3 = document.getElementById('line3');
+
+
+// console.log(line1);
+// console.log(line2);
+// console.log(line3);
+// console.log(mainnav);
 
 
 // const minWidth = 480
