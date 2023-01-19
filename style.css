@@ -17,7 +17,8 @@ body{
     display: flex;
     justify-content: space-between;
     z-index:100 ;
-    border-style: outset;
+    /* border-style: outset; */
+    border-bottom: solid 1px #000;
 }
 
 .menu-bar{
@@ -343,10 +344,11 @@ ul li a{
 
 .main-contact{
     display: flex;
-    height: 10vh;
-    padding: 25px 40px 60px 40px;
+    height: 15vh;
+    padding: 60px 40px 60px 40px;
     justify-content: space-between;
     list-style: none;
+    align-items: center;
 }
 
 .contact-item{
@@ -361,6 +363,10 @@ ul li a{
 .contact-item p {
     float: right;
   } 
+
+.contact-item a{
+    float: right;
+}  
 
 .hero2{
     text-align: left;
@@ -502,7 +508,37 @@ ul li a{
     #hamburger{
         display: block;
     }
+
+    /* .main-contact{
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        padding: 60px 60px 60px 60px;
+        justify-content: space-between;
+        list-style: none;
+    } */
 }
+
+@media screen and (max-width:980px) {
+    .main-contact{
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        padding: 60px 60px 60px 60px;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+    }
+
+    .contact-item{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+
+
 @media screen and (min-width:768px) and (max-width:1024px) {
     .main-nav {
         display: flex;
@@ -512,9 +548,12 @@ ul li a{
         list-style: none;
         padding-right: 40px;
     }
+
+
+
 }
 @media screen and (min-width:1024px) {
-    #main-contact,#main-hero2-text,#main-hero3,#main-hero4{
+    #main-hero2-text,#main-hero3,#main-hero4{
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -528,4 +567,6 @@ ul li a{
         list-style: none;
         padding-right: 40px;
     }
+    
 }
+
