@@ -40,17 +40,6 @@ body{
     align-items: center;
 }
 
-/* #hamburger{
-    position: relative;
-    display: none;
-    width: 30px;
-    height: 25px;
-    margin: 20px 5px 0 auto;
-    -webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-    z-index: 1000;   
-} */
-
 .burger-menu {
     width: 50px;
     height: 40px;
@@ -130,58 +119,6 @@ ul li a{
         display: block;
     }
 }
-
-
- /* I gave up 3 lined hamburger but still want to try 3 lines */
- /* #line1 {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
- } */
-
- /* #line2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
- } */
-
- /* #line3 {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
- } */
-
-/* .rotateA{
-    -webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-    transform: rotate(45deg);
-}
-
-.rotateB{
-    -webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-    transform: rotate(-45deg);
-} 
-
-.rotateC{
-    opacity: 0;
-} 
-
-.hide{
-    display: none;
-} */
 
 
 #navbar{
@@ -279,48 +216,6 @@ ul li a{
     height: auto;
 } 
 
-
-
-/* #hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transform: translateY(-50%);
- } */
-
- /* #hamburger::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
- } */
- /* #hamburger::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
- } */
-
-
-
-
-
-
-
-
-
 .hero{
     text-align: center;
     margin-top: 0;
@@ -348,7 +243,7 @@ ul li a{
     padding: 60px 40px 60px 40px;
     justify-content: space-between;
     list-style: none;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .contact-item{
@@ -492,16 +387,9 @@ ul li a{
 }
 
 
-/*  */
+/* up to 480px width  */
 @media screen and (max-width:480px) {
     #mainnav ul li {
-        /* display: flex;
-        font-size: 1rem;    
-        text-transform: uppercase;
-        margin-top: 34px;
-        list-style: none;
-        padding-right: 40px; */
-        /* display: none; */
         text-align: center;
     }
 
@@ -509,17 +397,6 @@ ul li a{
         display: block;
     }
 
-    /* .main-contact{
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
-        padding: 60px 60px 60px 60px;
-        justify-content: space-between;
-        list-style: none;
-    } */
-}
-
-@media screen and (max-width:980px) {
     .main-contact{
         display: flex;
         flex-direction: column;
@@ -527,18 +404,62 @@ ul li a{
         padding: 60px 60px 60px 60px;
         justify-content: space-between;
         list-style: none;
+    }
+
+    .contact-item{
+        display: flex;
+        padding: 0 60px 0 60px;
+    }
+    
+    .contact-item i {
+        margin-right: 20px;
+      }
+    
+    .contact-item p {
+        float: right;
+      } 
+    
+    .contact-item a{
+        float: right;
+    } 
+}
+
+/* up to 980px width  */
+/* @media screen and (min-width:480px) and (max-width:768px){ */
+@media screen and (max-width:980px) {
+    .main-contact{
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        padding: 60px 60px 60px 60px;
+        justify-content: center;
+        list-style: none;
         text-align: center;
     }
 
     .contact-item{
-        justify-content: space-evenly;
-        align-items: center;
+        display: flex;
+        padding: 0 60px 0 60px;
     }
+    
+    .contact-item i {
+        margin-right: 20px;
+      }
+    
+    .contact-item p {
+        float: right;
+      } 
+    
+    .contact-item a{
+        float: right;
+    } 
+
+
 }
 
 
 
-
+/* between 768px width and 1024px  */
 @media screen and (min-width:768px) and (max-width:1024px) {
     .main-nav {
         display: flex;
@@ -550,10 +471,40 @@ ul li a{
     }
 
 
+    .main-contact{
+        display: flex;
+        /* flex-direction: column;  */
+        height: 30vh;
+        padding: 60px 60px 60px 60px;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center; 
+    }
+
+    .contact-item{
+        display: flex;
+        padding: 0 60px 0 60px;
+    }
+    
+    .contact-item i {
+        margin-right: 20px;
+      }
+    
+    .contact-item p {
+        float: right;
+      } 
+    
+    .contact-item a{
+        float: right;
+    } 
+
+
 
 }
+
+/* more than 1024px width  */
 @media screen and (min-width:1024px) {
-    #main-hero2-text,#main-hero3,#main-hero4{
+    #main-hero2-text, #main-hero3, #main-hero4{
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -567,6 +518,33 @@ ul li a{
         list-style: none;
         padding-right: 40px;
     }
+
+    .main-contact{
+        display: flex;
+        /* flex-direction: column; */
+        height: 30vh;
+        padding: 60px 60px 60px 60px;
+        justify-content: space-between;
+        list-style: none;
+        /* text-align: center;  */
+    }
+
+    .contact-item{
+        display: flex;
+        padding: 0 60px 0 60px;
+    }
     
+    .contact-item i {
+        margin-right: 20px;
+      }
+    
+    .contact-item p {
+        float: right;
+      } 
+    
+    .contact-item a{
+        float: right;
+    } 
+
 }
 
