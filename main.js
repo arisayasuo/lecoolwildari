@@ -129,8 +129,16 @@ function showDateTime() {
         return minutes = minutes < 10 ? '0' + minutes : minutes;
     }
 
+    function formatSeconds(seconds){
+        return seconds = seconds < 10 ? '0' + seconds : seconds;
+    }
+
     formatHour(hour);
     formatMinutes(minutes);
+    formatSeconds(seconds);
+
+    console.log(hour, minutes, seconds);
+
 
     var copyright = '©︎ Arisa Yasuo' + '\n' + year + '\n' + hour + ':' + minutes + ':' + seconds;
     showCopyright.textContent = copyright;
