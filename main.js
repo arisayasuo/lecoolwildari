@@ -59,20 +59,20 @@ burgerMenu.addEventListener('click', () => {
 ///////////////////////////////////////////////////
 //Control hamburger --- HW: show mobile ver. of nav
 ///////////////////////////////////////////////////
-hamburger.addEventListener('click',showMobileNav);
+// hamburger.addEventListener('click',showMobileNav);
 
-function showMobileNav(event){
-    //nav.style.display = "block";
-    //hamburger.style.display = "none";
-    mainnav.classList.toggle('mainnavClicked');
-    mobilemainnav.classList.toggle('mobilemainnavshow')
-    // mobilemainnav.after(clone_mainnav);
-    line1.classList.toggle('rotateA');
-    line2.classList.toggle('rotateB');
-    line3.classList.toggle('rotateC');
-    // hamburgerBefore.classList.add('.closeBefore');
-    // hamburgerAfter.classList.add('.closeAfter');
-}
+// function showMobileNav(event){
+//     //nav.style.display = "block";
+//     //hamburger.style.display = "none";
+//     mainnav.classList.toggle('mainnavClicked');
+//     mobilemainnav.classList.toggle('mobilemainnavshow')
+//     // mobilemainnav.after(clone_mainnav);
+//     line1.classList.toggle('rotateA');
+//     line2.classList.toggle('rotateB');
+//     line3.classList.toggle('rotateC');
+//     // hamburgerBefore.classList.add('.closeBefore');
+//     // hamburgerAfter.classList.add('.closeAfter');
+// }
 
 
 
@@ -93,8 +93,56 @@ function showMobileNav(event){
 
 
 
-console.log(mobilemainnav);
-console.log(clone_mainnav);
+// console.log(mobilemainnav);
+// console.log(clone_mainnav);
+
+
+// function ShowNowYear() {
+//     var now = new Date();
+//     var year = now.getFullYear();
+//     document.write(year);   
+//  }
+
+//  function ShowNowTime(){
+//     var now = new Date();
+//     var hour = now.getHours();
+//     var minute = now.getMinutes();
+//     var second = now.getSeconds();
+//     document.write(hour + ':' + minute + ':' + second);
+//  }
+
+
+var showCopyright = document.querySelector('#copyright p');
+
+function showDateTime() {
+    var date = new Date();
+    var year = date.getFullYear();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    function formatHour(hour){
+        return hour = hour < 10 ? '0' + hour : hour;
+    }
+    
+    function formatMinutes(minutes){
+        return minutes = minutes < 10 ? '0' + minutes : minutes;
+    }
+
+    formatHour(hour);
+    formatMinutes(minutes);
+
+    var copyright = '©︎ Arisa Yasuo' + '\n' + year + '\n' + hour + ':' + minutes + ':' + seconds;
+    showCopyright.textContent = copyright;
+}
+
+
+// showDateTime();
+setInterval('showDateTime()',1000);
+
+
+
+
 
 
         
