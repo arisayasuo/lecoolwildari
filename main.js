@@ -113,6 +113,8 @@ burgerMenu.addEventListener('click', () => {
 
 
 var showCopyright = document.querySelector('#copyright p');
+var showBrowserTime = document.querySelector('#copyright p:nth-child(2)');
+var showBcnTime = document.querySelector('#copyright p:nth-child(3)');
 
 function showDateTime() {
     var date = new Date();
@@ -132,21 +134,91 @@ function showDateTime() {
     function formatSeconds(seconds){
         return seconds = seconds < 10 ? '0' + seconds : seconds;
     }
+    
+    // formatHour(hour);
+    // formatMinutes(minutes);
+    // formatSeconds(seconds);
 
-    formatHour(hour);
-    formatMinutes(minutes);
-    formatSeconds(seconds);
+    // if you use return function, you have to assign the value to a new variable. 
+    // otherwise, the returned value won't be saved and lost.
+
+    // var hourFm = formatHour(hour);
+    // var minutesFm = formatMinutes(minutes);
+    // var secondsFm = formatSeconds(seconds);
 
     console.log(hour, minutes, seconds);
 
 
-    var copyright = '©︎ Arisa Yasuo' + '\n' + year + '\n' + hour + ':' + minutes + ':' + seconds;
+    var copyright = '©︎ Arisa Yasuo ' + year ;
     showCopyright.textContent = copyright;
+    showBrowserTime.textContent = 'Browser time ' +formatHour(hour) + ':' + formatMinutes(minutes) + ':' + formatSeconds(seconds);
 }
 
 
+// Show BarcelonaTime
+function showFixedDateTime(){
+    // var dateFixed = new Date().toLocaleString({ timeZone: 'Europe/Madrid' });
+    // //var dateFixed = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+    // var year2 = new Date(dateFixed).getFullYear();
+    // var hour2 = new Date(dateFixed).getHours();
+    // var minutes2 = new Date(dateFixed).getMinutes();
+    // var seconds2 = new Date(dateFixed).getSeconds();
+
+    // console.log(dateFixed);
+
+  //Difference from GMT to BCN time
+  var difference = 1;
+  
+  //browser time
+  var browser = (new Date()).getTime();
+
+  //グリニッジ標準時を求める
+  var gmt = browser + (new Date()).getTimezoneOffset()*60*1000;
+
+  //時差を加減して、日付データに戻す
+  var bcnNow = new Date(gmt+difference*60*60*1000);
+
+  var hour2 = bcnNow.getHours();
+  var minutes2 = bcnNow.getMinutes();
+  var seconds2 = bcnNow.getSeconds();
+
+  console.log(hour2, minutes2, seconds2);
+
+
+
+
+    function formatHour(hour2){
+        return hour2 = hour2 < 10 ? '0' + hour2 : hour2;
+    }
+
+    function formatMinutes(minutes2){
+        return minutes2 = minutes2 < 10 ? '0' + minutes2 : minutes2;
+    }
+
+    function formatSeconds(seconds2){
+        return seconds2 = seconds2 < 10 ? '0' + seconds2 : seconds2;
+    }
+
+    var bcnTime = 'BCN time ' + formatHour(hour2) + ':' + formatMinutes(minutes2) + ':' + formatSeconds(seconds2);
+    showBcnTime.textContent = bcnTime;
+}
+
+
+
 // showDateTime();
-setInterval('showDateTime()',1000);
+// setInterval('showDateTime()',1000);
+
+function loop(){
+    //this will call it as fast as possible. (as fast as screen refresh rate) 1000ms/60 (mac)
+    window.requestAnimationFrame(loop);
+    showDateTime();
+    showFixedDateTime();
+
+}
+
+loop();
+
+// homework show my time and users time BCN Somewhere where user is(browser time)
 
 
 

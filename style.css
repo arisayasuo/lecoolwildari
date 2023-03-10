@@ -382,8 +382,9 @@ ul li a{
     padding:6px;
     text-decoration: none;
     text-align: center;
-    height:2rem;
+    height:4rem;
     width: 100vw;
+    justify-content: space-evenly;
 }
 
 
